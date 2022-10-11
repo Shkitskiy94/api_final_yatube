@@ -16,8 +16,6 @@ djangorestframework 3.12.4, djoser
 -   Установите и активируйте виртуальное окружение
 ```
 python -m venv venv
-```
-```
 source venv/Scripts/Activate
 ```
 -   Установите зависимости из файла requirements.txt
