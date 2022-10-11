@@ -8,9 +8,12 @@ REST API для социальной сети Yatube
 
 ### Технологии
 
-Python 3.7.9  
+Python 3.7.9 
+
 Django 2.2.16
+
 djangorestframework 3.12.4
+
 djoser
 
 ### Запуск проекта в dev-режиме
