@@ -14,6 +14,8 @@ djangorestframework 3.12.4, djoser
 ### Запуск проекта в dev-режиме
 
 -   Установите и активируйте виртуальное окружение
+python -m venv venv
+source venv/Scripts/Activate
 -   Установите зависимости из файла requirements.txt
 
 ```
