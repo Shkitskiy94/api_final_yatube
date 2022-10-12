@@ -4,34 +4,108 @@ Api from social network of bloggers YAtube
 
 ### Описание
 
-REST API для социальной сети Yatube
+Cоциальная сеть на Django для ведения дневников с возможностью у пользователей создавать учетные записи, публиковать посты, подписываться на авторов, отмечать понравившиеся записи и комментировать посты.
 
-### Технологии
+Реализовано взаимодействие с проектом через REST API и аутентификация по JWT токену.
 
-Python 3.7.9, Django 2.2.16,
-djangorestframework 3.12.4, djoser
+## Технологии и библиотеки:
+- [Python](https://www.python.org/);
+- [Django](https://www.djangoproject.com);
+- [Pillow](https://pillow.readthedocs.io/en/stable/);
+- [SQLite3](https://www.sqlite.org/index.html);
+- [Simple-JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/);
+- [Django REST Framework](https://www.django-rest-framework.org).
 
-### Запуск проекта в dev-режиме
+### Как запустить проект:
 
--   Установите и активируйте виртуальное окружение
+Клонировать репозиторий и перейти в него в командной строке:
+
+```
+git clone https://github.com/Shkitskiy94/api_final_yatube.git
+```
+
+```
+cd api_final_yatube
+```
+
+Cоздать и активировать виртуальное окружение:
+
 ```
 python -m venv venv
-source venv/Scripts/Activate
 ```
--   Установите зависимости из файла requirements.txt
+
+```
+source venv/bin/activate
+```
+
+```
+python -m pip install --upgrade pip
+```
+
+Установить зависимости из файла requirements.txt:
 
 ```
 pip install -r requirements.txt
-
 ```
 
--   В папке с файлом  [manage.py](http://manage.py/)  выполните команду:
+Выполнить миграции:
 
 ```
-python3 manage.py runserver
-
+cd yatube_api
 ```
 
-### Автор
+```
+python manage.py migrate
+```
 
-Yuriy_Shkitskiy
+Запустить проект:
+
+```
+python manage.py runserver
+```
+
+Примеры запросов к API:
+
+```
+GET, POST api/v1/posts/
+```
+
+```
+GET, PUT, PATCH, DELETE api/v1/posts/{id}/
+```
+
+```
+GET, POST api/v1/posts/{post_id}/comments/
+```
+
+```
+GET, PUT, PATCH, DELETE api/v1/posts/{post_id}/comments/{id}/
+```
+
+```
+GET api/v1/groups/
+```
+
+```
+GET api/v1/groups/{id}/
+```
+
+```
+GET, POST api/v1/follow/
+```
+
+```
+POST api/v1/jwt/create/
+```
+
+```
+POST api/v1/jwt/refresh/
+```
+
+```
+POST api/v1/jwt/verify/
+```
+
+## Автор:
+
+[Шкитский Юрий](https://github.com/Shkitskiy94/api_final_yatube.git)
