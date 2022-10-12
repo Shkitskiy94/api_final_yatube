@@ -106,6 +106,6 @@ POST api/v1/jwt/refresh/
 POST api/v1/jwt/verify/
 ```
 
-## Автор:
+## Автор проекта:
 
 [Шкитский Юрий](https://github.com/Shkitskiy94/api_final_yatube.git)
