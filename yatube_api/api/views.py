@@ -63,7 +63,7 @@ class FollowViewSet(CreateRetrieveViewSet):
 
     def get_queryset(self):
         """Фильтрация подписок по user"""
-        return Follow.objects.filter(user=self.request.user)
+        return self.request.user.follower.all()
 
     def perform_create(self, serializer):
         """GET, POST - возвращает все подписки пользователя."""
